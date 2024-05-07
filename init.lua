@@ -156,6 +156,10 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
