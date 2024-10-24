@@ -166,6 +166,13 @@ vim.opt.hlsearch = true
 
 vim.opt.guicursor = 'n-v-i-c:block-Cursor'
 
+vim.filetype.add {
+  extension = {
+    tf = 'terraform',
+    tfvars = 'terraform-vars',
+  },
+}
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
@@ -603,7 +610,9 @@ require('lazy').setup({
             },
           },
         },
-        terraformls = {},
+        terraformls = {
+          filetypes = { 'terraform', 'terraform-vars' },
+        },
       }
 
       -- Ensure the servers and tools above are installed
