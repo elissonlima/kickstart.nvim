@@ -447,7 +447,7 @@ require('lazy').setup({
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
-      --
+      --:MasonInstall rust-analyzer codelldb
       -- LSP stands for Language Server Protocol. It's a protocol that helps editors
       -- and language tooling communicate in a standardized fashion.
       --
@@ -882,6 +882,14 @@ require('lazy').setup({
       --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
       --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    end,
+  },
+  {
+    'wtfox/jellybeans.nvim',
+    priority = 1000,
+    config = function()
+      require('jellybeans').setup()
+      vim.cmd.colorscheme 'jellybeans'
     end,
   },
 
