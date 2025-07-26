@@ -272,6 +272,14 @@ require('lazy').setup({
     },
   },
 
+  {
+    'farmergreg/vim-lastplace',
+    config = function()
+      vim.g.lastplace_ignore = 'gitcommit,gitrebase,help,markdown'
+      vim.g.lastplace_ignore_buftype = 'help,nofile,quickfix,terminal'
+    end,
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -886,11 +894,13 @@ require('lazy').setup({
   },
   {
     'wtfox/jellybeans.nvim',
+    lazy = false,
     priority = 1000,
-    config = function()
-      require('jellybeans').setup()
-      vim.cmd.colorscheme 'jellybeans'
-    end,
+    --opts = {},
+    --config = function()
+    --  require('jellybeans').setup()
+    --  vim.cmd.colorscheme 'jellybeans'
+    --end,
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
